@@ -1,11 +1,12 @@
 from dotenv import load_dotenv
+import os
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
 import re
 from PIL import Image
 import requests
-import os
+
 
 
 # Cargar variables de entorno desde el archivo .env
