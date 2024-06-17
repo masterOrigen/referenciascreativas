@@ -6,9 +6,12 @@ import re
 from PIL import Image
 import requests
 
-#Je t'aime plus que les mots,
-#Plus que les sentiments,
-#Plus que la vie elle-même
+# Cargar variables de entorno desde el archivo .env
+load_dotenv()
+
+# Configurar la API key de Google AI utilizando la variable de entorno
+google_api_key = os.getenv('GOOGLE_API_KEY')
+genai.configure(api_key=google_api_key)
 
 st.set_page_config(
     page_title="Google AI Chat",
