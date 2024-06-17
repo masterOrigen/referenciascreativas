@@ -70,7 +70,6 @@ def load_model() -> genai.GenerativeModel:
     :return: an instance of the `genai.GenerativeModel` class.
     """
     model = genai.GenerativeModel('gemini-pro')
-     model.set_temperature(0)
     return model
 
 @st.cache_resource
@@ -80,7 +79,6 @@ def load_modelvision() -> genai.GenerativeModel:
     :return: an instance of the `genai.GenerativeModel` class.
     """
     model = genai.GenerativeModel('gemini-pro-vision')
-     model.set_temperature(0)
     return model
 
 
