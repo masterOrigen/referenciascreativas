@@ -14,18 +14,29 @@ st.set_page_config(
     page_icon="https://seeklogo.com/images/G/google-ai-logo-996E85F6FD-seeklogo.com.png",
     layout="wide",
 )
-# Path: app.py
-#Author: Cristian Olivares
+# Path: Main.py
+#Author: Sergio Demis Lopez Martinez
 #------------------------------------------------------------
 #HEADER
 st.markdown('''
-GEMINI AI  <img src="https://seeklogo.com/images/G/google-ai-logo-996E85F6FD-seeklogo.com.png" width="20" height="20">
- BY GPT MEDIOS''', unsafe_allow_html=True)
+Powered by Google AI <img src="https://seeklogo.com/images/G/google-ai-logo-996E85F6FD-seeklogo.com.png" width="20" height="20">
+, Streamlit and Python''', unsafe_allow_html=True)
+st.caption("By Sergio Demis Lopez Martinez")
 
 #------------------------------------------------------------
 #LANGUAGE
-# Columna de idioma
-lang = 'Español'
+langcols = st.columns([0.2,0.8])
+with langcols[0]:
+  lang = st.selectbox('Select your language',
+  ('English', 'Español', 'Français', 'Deutsch',
+  'Italiano', 'Português', 'Polski', 'Nederlands',
+  'Русский', '日本語', '한국어', '中文', 'العربية',
+  'हिन्दी', 'Türkçe', 'Tiếng Việt', 'Bahasa Indonesia',
+  'ภาษาไทย', 'Română', 'Ελληνικά', 'Magyar', 'Čeština',
+  'Svenska', 'Norsk', 'Suomi', 'Dansk', 'हिन्दी', 'हिन्�'),index=1)
+
+if 'lang' not in st.session_state:
+    st.session_state.lang = lang
 st.divider()
 
 #------------------------------------------------------------
