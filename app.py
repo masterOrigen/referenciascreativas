@@ -69,7 +69,8 @@ def load_model() -> genai.GenerativeModel:
     'gemini-pro'.
     :return: an instance of the `genai.GenerativeModel` class.
     """
-    model = genai.GenerativeModel('gemini-pro', temperature=0)
+    model = genai.GenerativeModel('gemini-pro')
+     model.set_temperature(0)
     return model
 
 @st.cache_resource
@@ -78,7 +79,8 @@ def load_modelvision() -> genai.GenerativeModel:
     The function `load_modelvision` loads a generative model for vision tasks using the `gemini-pro-vision` model.
     :return: an instance of the `genai.GenerativeModel` class.
     """
-    model = genai.GenerativeModel('gemini-pro-vision', temperature=0)
+    model = genai.GenerativeModel('gemini-pro-vision')
+     model.set_temperature(0)
     return model
 
 
