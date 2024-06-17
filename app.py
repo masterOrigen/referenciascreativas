@@ -14,7 +14,7 @@ load_dotenv()
 
 # Configurar la API key de Google AI utilizando la variable de entorno
 google_api_key = os.getenv('GOOGLE_API_KEY')
-genai.configure(api_key=google_api_key)
+
 
 st.set_page_config(
     page_title="Google AI Chat",
@@ -85,7 +85,7 @@ def load_modelvision() -> genai.GenerativeModel:
 
 #------------------------------------------------------------
 #CONFIGURATION
-genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+genai.configure(api_key=google_api_key)
 
 model = load_model()
 
