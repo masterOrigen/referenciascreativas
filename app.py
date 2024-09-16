@@ -108,7 +108,7 @@ if 'welcome' not in st.session_state or lang != st.session_state.lang:
     welcome  = model.generate_content(f'''
     Da un saludo de bienvenida al usuario y sugiere que puede hacer
     (Puedes describir imágenes, responder preguntas, leer archivos texto, leer tablas,generar gráficos con graphviz, etc)
-    eres un chatbot de IA creado por GPT MEDIOS. generate the answer in {lang}''')
+    eres un chatbot de IA creado para ayudar. generate the answer in {lang}''')
     welcome.resolve()
     st.session_state.welcome = welcome
 
