@@ -107,10 +107,8 @@ if 'welcome' not in st.session_state or lang != st.session_state.lang:
     st.session_state.lang = lang
     welcome = model.generate_content(f'''
     Saluda al usuario con el siguiente mensaje:
-    "¡Hola! Soy un chatbot de IA aquí para ayudarte. ¿En qué puedo ayudarte hoy? Cuéntame qué texto, guión, copy, frase radial, o cualquier otro contenido necesitas que te ayude a desarrollar para que comencemos..."
+    "Hola! soy tu asistente creativo y estoy aqui para apoyarte en la búsqueda de referencias para tus geniales ideas!, cuéntame un poco que buscas."
     
-    Luego, en un tamaño más pequeño, agrega:
-    "(Para ayudarte, puedo ver imágenes, responder preguntas, leer archivos de texto, leer tablas y más. ¡Solo pregunta!)"
     
     Genera la respuesta en {lang}
     ''')
